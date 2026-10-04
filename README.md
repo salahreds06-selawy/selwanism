@@ -62,6 +62,7 @@ python sel -t 10.10.10.50 -c 2 nmap
 
 ### Direct CLI Commands
 ```bash
+first:    --sel--                 # for a better interface
 sel -h                            # Display help menu
 sel list                          # Display all 36 tools grouped by category
 sel nmap                          # View Nmap scanner commands
