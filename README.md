@@ -155,5 +155,10 @@ MIT License.
 
 **Salah Eddin Essbihi**
 - LinkedIn: salah-eddin-essbihi
-- TryHackMe: cyber.salah.sec
+- TryHackMe: cyber.salah.sec---
+
+## 🧑‍💻 Contributors
+
+- [@salahreds06-selawy](https://github.com/salahreds06-selawy) — Creator
+- [@SniperOfTDM](https://github.com/SniperOfTDM) — CLI architecture, modular JSON refactor, packaging
 - GitHub: salahreds06-selawy
