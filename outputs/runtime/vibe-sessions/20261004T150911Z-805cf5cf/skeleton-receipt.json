@@ -1,0 +1,64 @@
+{
+    "stage":  "skeleton_check",
+    "run_id":  "20261004T150911Z-805cf5cf",
+    "mode":  "interactive_governed",
+    "task":  "I wanna improve this project look inspect and learn what can i do",
+    "generated_at":  "2026-10-04T15:09:13Z",
+    "repo_root":  "C:\\Users\\botay\\.gemini\\config\\skills\\vibe",
+    "git_branch":  "",
+    "git_status":  [
+
+                   ],
+    "required_paths":  [
+                           {
+                               "path":  "SKILL.md",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "protocols/runtime.md",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "protocols/think.md",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "protocols/do.md",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "protocols/team.md",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "protocols/retro.md",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "config/runtime-contract.json",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "config/runtime-modes.json",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "config/requirement-doc-policy.json",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "config/plan-execution-policy.json",
+                               "exists":  true
+                           },
+                           {
+                               "path":  "config/phase-cleanup-policy.json",
+                               "exists":  true
+                           }
+                       ],
+    "existing_requirement_docs":  [
+
+                                  ],
+    "existing_plan_docs":  [
+
+                           ]
+}

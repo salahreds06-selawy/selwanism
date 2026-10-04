@@ -1,0 +1,23 @@
+{
+    "stage":  "requirement_doc",
+    "run_id":  "20261004T153210Z-d00dc17b",
+    "governance_scope":  "root",
+    "mode":  "interactive_governed",
+    "requirement_doc_path":  "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\docs\\requirements\\2026-10-04-i-wanna-improve-this-project-look-inspect-and-learn-what-can-i-d.md",
+    "child_requirement_handoff_path":  null,
+    "canonical_write_allowed":  true,
+    "inherited_requirement_doc_path":  null,
+    "runtime_input_packet_path":  "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153210Z-d00dc17b\\runtime-input-packet.json",
+    "code_task_tdd_decision":  {
+                                   "mode":  "not_applicable",
+                                   "source":  "host_decision",
+                                   "reason":  "No host decision or runtime inference required code-task TDD evidence for this task.",
+                                   "exception":  null
+                               },
+    "memory_context_path":  "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153210Z-d00dc17b\\memory-activation\\requirement-context-pack.json",
+    "memory_context_item_count":  2,
+    "memory_context_estimated_tokens":  41,
+    "memory_disclosure_level":  "decision_focused",
+    "memory_capsule_count":  1,
+    "generated_at":  "2026-10-04T15:32:43Z"
+}

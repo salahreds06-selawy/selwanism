@@ -1,0 +1,48 @@
+{
+  "nmap": {
+    "title": "Nmap - Network Scanner",
+    "category": "Reconnaissance",
+    "desc": "Discover hosts and services on a network.",
+    "steps": [
+      ["Quick scan", "nmap -sV <IP>"],
+      ["Full TCP scan", "nmap -sV -sC -p- -T4 <IP>"],
+      ["UDP scan (top 100)", "nmap -sU --top-ports 100 <IP>"],
+      ["OS detection", "nmap -O <IP>"],
+      ["Save output", "nmap -sV -oN scan.txt <IP>"],
+      ["Aggressive scan", "nmap -A -T4 <IP>"]
+    ]
+  },
+  "gobuster": {
+    "title": "Gobuster - Directory & DNS Fuzzer",
+    "category": "Reconnaissance",
+    "desc": "Directory and file brute-forcing tool.",
+    "steps": [
+      ["Basic directory scan", "gobuster dir -u http://<IP> -w /usr/share/wordlists/dirb/common.txt"],
+      ["Scan with extensions", "gobuster dir -u http://<IP> -w list.txt -x php,html,txt"],
+      ["DNS subdomain enum", "gobuster dns -d <IP> -w subdomains.txt"]
+    ]
+  },
+  "osint": {
+    "title": "Open Source Intelligence (OSINT)",
+    "category": "Reconnaissance",
+    "desc": "Gather public intelligence on targets.",
+    "steps": [
+      ["Google Dorking", "site:<IP> filetype:pdf"],
+      ["theHarvester", "theHarvester -d <IP> -b google"],
+      ["Sherlock username hunt", "sherlock username"],
+      ["ExifTool metadata", "exiftool image.jpg"],
+      ["WHOIS lookup", "whois <IP>"],
+      ["DNS enumeration", "dnsrecon -d <IP>"]
+    ]
+  },
+  "masscan": {
+    "title": "Masscan - Fast Port Scanner",
+    "category": "Reconnaissance",
+    "desc": "Internet-scale port scanner, faster than Nmap.",
+    "steps": [
+      ["Scan entire subnet", "masscan -p1-65535 <IP>/24 --rate=10000"],
+      ["Scan top ports", "masscan --top-ports 1000 <IP> --rate=5000"],
+      ["Save to file", "masscan -p80,443,8080 <IP>/24 --rate=5000 -oL output.txt"]
+    ]
+  }
+}

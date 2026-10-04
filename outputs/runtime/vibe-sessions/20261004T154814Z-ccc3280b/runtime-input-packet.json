@@ -1,0 +1,228 @@
+{
+    "stage":  "runtime_input_freeze",
+    "run_id":  "20261004T154814Z-ccc3280b",
+    "governance_scope":  "root",
+    "task":  "Approve all of them.And add some ui imporvements Proceed Level L",
+    "entry_intent_id":  "vibe",
+    "requested_stage_stop":  "requirement_doc",
+    "requested_grade_floor":  null,
+    "generated_at":  "2026-10-04T15:48:45Z",
+    "runtime_mode":  "interactive_governed",
+    "internal_grade":  "L",
+    "module_assignments":  {
+                               "schema_version":  "runtime_module_assignments_v1",
+                               "source":  null,
+                               "run_id":  "20261004T154814Z-ccc3280b",
+                               "task":  "Approve all of them.And add some ui imporvements Proceed Level L",
+                               "unit_count":  0,
+                               "status":  "no_bound_skills",
+                               "units":  [
+
+                                         ]
+                           },
+    "host_adapter":  {
+                         "requested_id":  "codex",
+                         "id":  "codex",
+                         "requested_host_id":  "codex",
+                         "effective_host_id":  "codex",
+                         "status":  "supported-with-constraints",
+                         "install_mode":  "governed",
+                         "check_mode":  "governed",
+                         "bootstrap_mode":  "governed",
+                         "target_root":  "C:\\Users\\botay\\.agents",
+                         "host_settings_path":  null,
+                         "closure_path":  null
+                     },
+    "hierarchy":  {
+                      "governance_scope":  "root",
+                      "root_run_id":  "20261004T154814Z-ccc3280b",
+                      "parent_run_id":  null,
+                      "parent_unit_id":  null,
+                      "inherited_requirement_doc_path":  null,
+                      "inherited_execution_plan_path":  null,
+                      "delegation_envelope_path":  null
+                  },
+    "authority_flags":  {
+                            "runtime_entry":  "vibe",
+                            "explicit_runtime_skill":  "vibe",
+                            "router_truth_level":  "authoritative",
+                            "shadow_only":  true,
+                            "non_authoritative":  false,
+                            "allow_requirement_freeze":  true,
+                            "allow_plan_freeze":  true,
+                            "allow_global_dispatch":  true,
+                            "allow_completion_claim":  true
+                        },
+    "provenance":  {
+                       "source_of_truth":  "vibe_runtime_with_agent_led_skill_search",
+                       "freeze_before_requirement_doc":  true,
+                       "proof_class":  "structure"
+                   },
+    "custom_admission":  {
+                             "status":  "disabled_default_local_index_only",
+                             "target_root":  "C:\\Users\\botay\\.agents"
+                         },
+    "continuation_context":  null,
+    "host_decision":  null,
+    "code_task_tdd_decision":  {
+                                   "mode":  "required",
+                                   "source":  "runtime_inference",
+                                   "reason":  "The task includes implementation or defect-correction intent that requires code-task TDD evidence.",
+                                   "exception":  null
+                               },
+    "skill_search_guide":  {
+                               "schema_version":  "skill_search_guide_v1",
+                               "skill_roots":  [
+                                                   {
+                                                       "kind":  "host_local",
+                                                       "path":  "C:\\Users\\botay\\.agents\\skills"
+                                                   },
+                                                   {
+                                                       "kind":  "host_plugin_cache",
+                                                       "path":  "C:\\Users\\botay\\.codex\\plugins\\cache"
+                                                   },
+                                                   {
+                                                       "kind":  "repo_core",
+                                                       "path":  "C:\\Users\\botay\\.gemini\\config\\skills\\vibe\\core\\skills"
+                                                   },
+                                                   {
+                                                       "kind":  "repo_bundled",
+                                                       "path":  "C:\\Users\\botay\\.gemini\\config\\skills\\vibe\\bundled\\skills"
+                                                   }
+                                               ],
+                               "search_protocol":  [
+                                                       "先拆任务，再拆模块",
+                                                       "会按模块搜索本地 skills",
+                                                       "每个模块单独搜索本地 skills",
+                                                       "会先看候选 skill 名和短描述，再打开并阅读候选 `SKILL.md`",
+                                                       "每个模块最多保留 3 个候选，避免上下文污染",
+                                                       "以候选 `SKILL.md` 的真实用途为准，不按词面碰撞判断"
+                                                   ],
+                               "selection_rules":  [
+                                                       "会给出 `L` / `XL` 两套 skills 组织方案，并说明每个 skill 的职责",
+                                                       "优先选择真正负责该模块的 owner，不选只沾边的 helper",
+                                                       "一个 skill 可以覆盖多个模块",
+                                                       "explicit_only skills 只有在用户明确点名时才可入选",
+                                                       "不得跨越候选 skill 声明的负边界或适用限制",
+                                                       "没有 owner 时必须报缺口，不得伪装覆盖",
+                                                       "没有 owner 的模块会明确标出缺口"
+                                                   ],
+                               "disclosure_rules":  [
+                                                        "requirement 阶段公开搜索办法，并在请用户选择前由 Agent 分别给出 L / XL 的具体工作流和候选 skill 名称；这些名称必须标为尚未正式选定或使用，不得公开程序候选排名或预选结果",
+                                                        "xl_plan 阶段公开模块、候选、最终采用和缺口",
+                                                        "execute 阶段公开本次实际启用的 skills"
+                                                    ],
+                               "workflow_level_contract":  {
+                                                               "levels":  [
+                                                                              "L",
+                                                                              "XL"
+                                                                          ],
+                                                               "L":  "先讲清模块，再组织较轻量的串行方案",
+                                                               "XL":  "先讲清模块，再组织更完整的分波次方案"
+                                                           }
+                           },
+    "agent_skill_organization":  null,
+    "canonical_router":  {
+                             "role":  "compatibility_candidate_audit",
+                             "prompt":  "Approve all of them.And add some ui imporvements Proceed Level L",
+                             "host_id":  "codex",
+                             "target_root":  "C:\\Users\\botay\\.agents",
+                             "unattended":  false,
+                             "host_decision_applied":  false,
+                             "host_decision_kind":  null,
+                             "host_decision_action":  null,
+                             "route_script_path":  "C:\\Users\\botay\\.gemini\\config\\skills\\vibe\\scripts\\router\\resolve-pack-route.ps1"
+                         },
+    "route_snapshot":  {
+                           "task_type":  "coding",
+                           "route_mode":  "local_skill_overlay"
+                       },
+    "skill_routing":  {
+                          "schema_version":  "simplified_skill_routing_v1",
+                          "candidates":  [
+                                             {
+                                                 "skill_id":  "c4-architecture-c4-architecture",
+                                                 "skill_md_path":  null,
+                                                 "reason":  "router candidate audit",
+                                                 "task_slice":  "Consider c4-architecture-c4-architecture as a local Skill candidate; this record does not select it for execution.",
+                                                 "state":  "candidate",
+                                                 "dispatch_phase":  "not_applicable",
+                                                 "parallelizable_in_root_xl":  false,
+                                                 "skill_entrypoint":  null,
+                                                 "skill_root":  null,
+                                                 "bounded_role":  "candidate_only",
+                                                 "must_preserve_workflow":  false,
+                                                 "binding_profile":  "candidate_only",
+                                                 "lane_policy":  "none",
+                                                 "write_scope":  "none",
+                                                 "review_mode":  "none",
+                                                 "execution_priority":  0,
+                                                 "required_inputs":  [
+
+                                                                     ],
+                                                 "expected_outputs":  [
+
+                                                                      ],
+                                                 "verification_expectation":  "Satisfy the module acceptance criteria.",
+                                                 "progressive_load_policy":  [
+
+                                                                             ],
+                                                 "legacy_source":  ""
+                                             }
+                                         ],
+                          "rejected":  [
+                                           {
+                                               "skill_id":  "c4-architecture-c4-architecture",
+                                               "skill_md_path":  null,
+                                               "reason":  "candidate_audit_only",
+                                               "task_slice":  "Consider c4-architecture-c4-architecture as a local Skill candidate; this record does not select it for execution.",
+                                               "state":  "rejected",
+                                               "dispatch_phase":  "not_applicable",
+                                               "parallelizable_in_root_xl":  false,
+                                               "skill_entrypoint":  null,
+                                               "skill_root":  null,
+                                               "bounded_role":  "candidate_only",
+                                               "must_preserve_workflow":  false,
+                                               "binding_profile":  "candidate_only",
+                                               "lane_policy":  "none",
+                                               "write_scope":  "none",
+                                               "review_mode":  "none",
+                                               "execution_priority":  0,
+                                               "required_inputs":  [
+
+                                                                   ],
+                                               "expected_outputs":  [
+
+                                                                    ],
+                                               "verification_expectation":  "Satisfy the module acceptance criteria.",
+                                               "progressive_load_policy":  [
+
+                                                                           ],
+                                               "legacy_source":  ""
+                                           }
+                                       ]
+                      },
+    "storage":  {
+                    "workspace_root":  "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main",
+                    "workspace_sidecar_root":  "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\.vibeskills",
+                    "project_descriptor_path":  "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\.vibeskills\\project.json",
+                    "artifact_root":  "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main",
+                    "artifact_root_source":  "explicit_override",
+                    "default_workspace_sidecar_artifact_root":  false,
+                    "host_sidecar_root":  "C:\\Users\\botay\\.agents\\.vibeskills",
+                    "workspace_memory_identity_root":  "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\.vibeskills\\project.json",
+                    "workspace_memory_identity_scope":  "workspace",
+                    "workspace_memory_driver_contract":  "workspace_shared_memory_v1",
+                    "workspace_memory_logical_owners":  [
+                                                            "state_store",
+                                                            "serena",
+                                                            "ruflo",
+                                                            "cognee"
+                                                        ]
+                },
+    "divergence_shadow":  {
+                              "explicit_runtime_override_applied":  true,
+                              "explicit_runtime_override_reason":  "governed_runtime_entry",
+                              "governance_scope_mismatch":  false
+                          }
+}

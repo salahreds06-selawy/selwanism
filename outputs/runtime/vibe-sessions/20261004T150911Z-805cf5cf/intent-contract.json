@@ -1,0 +1,83 @@
+{
+    "generated_at":  "2026-10-04T15:09:58Z",
+    "title":  "I wanna improve this project look inspect and learn what can i do",
+    "goal":  "I wanna improve this project look inspect and learn what can i do",
+    "deliverable":  "The user-requested outcome described in the full goal, with supporting evidence appropriate to that outcome",
+    "constraints":  [
+                        "Do not bypass the fixed six-stage governed runtime.",
+                        "Do not widen scope silently beyond the frozen requirement document."
+                    ],
+    "acceptance_criteria":  [
+                                "Requirement document is frozen before execution.",
+                                "Execution plan exists before task execution.",
+                                "Verification evidence exists before completion claims.",
+                                "Phase cleanup receipt is produced."
+                            ],
+    "non_goals":  [
+                      "Do not create separate M/L/XL entry commands.",
+                      "Do not introduce a second router or control plane."
+                  ],
+    "artifact_review_requirements":  [
+
+                                     ],
+    "baseline_document_quality_dimensions":  [
+
+                                             ],
+    "baseline_ui_quality_dimensions":  [
+
+                                       ],
+    "task_specific_acceptance_extensions":  [
+
+                                            ],
+    "code_task_tdd_decision":  {
+                                   "mode":  "not_applicable",
+                                   "source":  "runtime_inference",
+                                   "reason":  "No host decision or runtime inference required code-task TDD evidence for this task.",
+                                   "exception":  null
+                               },
+    "workflow_level_confirmation":  {
+                                        "enabled":  true,
+                                        "user_visible":  true,
+                                        "required_for_levels":  [
+                                                                    "L",
+                                                                    "XL"
+                                                                ],
+                                        "recommended_level":  "L",
+                                        "recommendation_reason":  "当前任务更像单主线交付：先冻结需求和计划，再让 Agent 按模块组织一个较轻量的 skills 方案，通常比一开始就上分波次协作更省沟通成本。",
+                                        "question":  "先确认任务级别：这次任务走 L 级还是 XL 级？",
+                                        "decision_importance":  "L 和 XL 会直接改变后续的协作深度、是否进入分波次执行，以及证据和回归边界的强度。",
+                                        "levels":  {
+                                                       "L":  "L 级适合多步骤但主要串行的工作：会确认需求和计划，证据要求完整，但一般由一个主流程推进。",
+                                                       "XL":  "XL 级适合研究交付、多产物、多技能协作或风险更高的任务：会有更严格的需求冻结、计划冻结、分阶段执行、证据清单和收尾检查。"
+                                                   },
+                                        "level_details":  {
+                                                              "L":  {
+                                                                        "workflow":  "先冻结需求和计划，再由一个主流程串行推进 Agent 组织出的方案。",
+                                                                        "skills":  "会先按模块搜索本地 skills、阅读候选 `SKILL.md`，再给出较轻量的 L 级组织方案；不会给非代码任务附加代码开发验证流程。",
+                                                                        "why_this_fit":  "适合仍然是一个主交付物、依赖链较短、并行收益不高的任务，可以把沟通成本压低，同时保留完整的冻结与验证边界。",
+                                                                        "confirm_reply":  "如果你认可这个较轻量但证据完整的流程，请回复：`走 L 级`。"
+                                                                    },
+                                                              "XL":  {
+                                                                         "workflow":  "先冻结需求和计划，再把 Agent 组织出的方案拆成分波次执行；只有在依赖安全时才允许小步并行，最后统一回到验证和收尾。",
+                                                                         "skills":  "会先按模块组织更完整的本地 Skills；确需多代理时，由当前 Agent 依据已冻结计划分波次协调，不额外假定一个协调 Skill。",
+                                                                         "why_this_fit":  "适合多产物、多技能协作、研究交付或高风险改动，因为它能先讲清分工、阶段边界和证据清单，再进入执行。",
+                                                                         "confirm_reply":  "如果你希望先把分工和波次讲清楚，再进入更重的执行流程，请回复：`走 XL 级`。"
+                                                                     }
+                                                          },
+                                        "selection_prompt":  "请根据上面的说明选择并确认这次任务级别。"
+                                    },
+    "risk_tolerance":  "moderate",
+    "autonomy_mode":  "interactive_governed",
+    "open_questions":  [
+
+                       ],
+    "inference_notes":  [
+                            "This contract was derived from the raw task text.",
+                            "Interactive mode may still surface explicit clarification questions outside the script path."
+                        ],
+    "assumptions":  [
+                        "Interactive clarification is allowed if unresolved ambiguity materially changes the requested outcome."
+                    ],
+    "internal_grade":  "M",
+    "source_task":  "I wanna improve this project look inspect and learn what can i do"
+}

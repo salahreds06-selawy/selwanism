@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "brand": "vibeskills",
+  "generated_at": "2026-10-04T15:48:15Z",
+  "workspace_root": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main",
+  "workspace_sidecar_root": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\.vibeskills",
+  "project_descriptor_path": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\.vibeskills\\project.json",
+  "default_artifact_root": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\.vibeskills",
+  "relative_runtime_contract": {
+    "requirement_root": "docs/requirements",
+    "execution_plan_root": "docs/plans",
+    "session_root": "outputs/runtime/vibe-sessions"
+  },
+  "memory_plane": {
+    "identity_root": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\.vibeskills\\project.json",
+    "identity_scope": "workspace",
+    "driver_contract": "workspace_shared_memory_v1",
+    "logical_owners": [
+      "state_store",
+      "serena",
+      "ruflo",
+      "cognee"
+    ]
+  },
+  "host_sidecar_root": "C:\\Users\\botay\\.agents\\.vibeskills"
+}

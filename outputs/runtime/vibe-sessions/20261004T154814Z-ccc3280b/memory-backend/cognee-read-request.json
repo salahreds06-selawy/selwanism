@@ -1,0 +1,19 @@
+{
+    "lane":  "cognee",
+    "stage":  "skeleton_check",
+    "task":  "Approve all of them.And add some ui imporvements Proceed Level L",
+    "top_k":  3,
+    "max_chars_per_item":  220,
+    "keywords":  [
+                     "approve",
+                     "all",
+                     "them",
+                     "and",
+                     "add",
+                     "some",
+                     "imporvements",
+                     "proceed",
+                     "level"
+                 ],
+    "project_key_source":  null
+}

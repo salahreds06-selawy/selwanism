@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "status": "backend_read_empty",
+  "lane": "cognee",
+  "store_path": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\.vibeskills\\memory\\workspace-memory-plane.jsonl",
+  "project_key": "selwanism-main",
+  "project_key_source": "workspace_plane",
+  "item_count": 0,
+  "items": [],
+  "capsule_count": 0,
+  "capsules": [],
+  "suppressed_count": 0,
+  "workspace_memory_plane": {
+    "schema_version": 1,
+    "workspace_root": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main",
+    "workspace_sidecar_root": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\.vibeskills",
+    "descriptor_path": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\.vibeskills\\project.json",
+    "workspace_id": "ws:1d636bf14cf5e9c304fc9ac5",
+    "plane_path": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\.vibeskills\\memory\\workspace-memory-plane.jsonl"
+  },
+  "driver_mode": "compatibility_shell",
+  "generated_at": "2026-10-04T15:09:14Z"
+}

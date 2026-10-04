@@ -1,0 +1,34 @@
+{
+    "stage":  "phase_cleanup",
+    "run_id":  "20261004T153629Z-c51938ae",
+    "mode":  "interactive_governed",
+    "task":  "I wanna improve this project look inspect and learn what can i do Update: I wanna improve this project look inspect and learn what can i do Update: I wanna improve this project look inspect and learn what can i do",
+    "cleanup_mode":  "receipt_only",
+    "cleanup_admitted":  true,
+    "default_bounded_cleanup_applied":  false,
+    "execute_governance_cleanup_requested":  false,
+    "managed_node_cleanup_applied":  false,
+    "generated_at":  "2026-10-04T15:39:22Z",
+    "cleanup_result":  {
+                           "performed":  false,
+                           "reason":  "no_cleanup_action_requested"
+                       },
+    "cleanup_error":  null,
+    "delivery_acceptance":  {
+                                "report_path":  "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\delivery-acceptance-report.json",
+                                "markdown_path":  "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\delivery-acceptance-report.md",
+                                "gate_result":  "PASS",
+                                "completion_language_allowed":  true,
+                                "runtime_status":  "completed",
+                                "readiness_state":  "fully_ready",
+                                "manual_review_layer_count":  0,
+                                "failing_layer_count":  0,
+                                "forbidden_completion_hit_count":  0,
+                                "incomplete_layers":  [
+
+                                                      ],
+                                "command_exit_code":  0
+                            },
+    "delivery_acceptance_error":  null,
+    "proof_class":  "runtime"
+}

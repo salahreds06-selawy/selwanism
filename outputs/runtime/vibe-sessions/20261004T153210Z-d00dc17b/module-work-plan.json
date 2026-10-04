@@ -1,0 +1,97 @@
+{
+    "schema_version":  "module_work_plan_v1",
+    "source_run_id":  "20261004T153210Z-d00dc17b",
+    "requirement_digest":  "6d7f8bb845e4b793b653718cc00b3b6fc1441bf795fbd2f8e39963b648a52414",
+    "organization_digest":  "2e2b7a085fefc25338e8ef6fb6b76a68c3ffabdc051ed38617fb323e31915b42",
+    "workflow_level":  "L",
+    "modules":  [
+                    {
+                        "module_id":  "codebase_inspection",
+                        "goal":  "Perform in-depth inspection of sel codebase and catalog defects, architectural limitations, and usability gaps.",
+                        "required":  true,
+                        "depends_on":  [
+
+                                       ],
+                        "execution_mode":  "skill_assigned",
+                        "write_scope":  "",
+                        "expected_outputs":  [
+
+                                             ],
+                        "verification":  [
+
+                                         ],
+                        "gap_reason":  null,
+                        "acceptance_criteria":  [
+                                                    {
+                                                        "criterion_id":  "inspection-complete",
+                                                        "description":  "Codebase inspection report details CLI argument defects, Windows clear screen issue, and tight coupling of cheatsheets.",
+                                                        "verification_mode":  "automated"
+                                                    }
+                                                ]
+                    },
+                    {
+                        "module_id":  "enhancement_roadmap",
+                        "goal":  "Synthesize actionable enhancement roadmap detailing argument parsing, modular cheatsheet data, and pentesting workflow additions.",
+                        "required":  true,
+                        "depends_on":  [
+
+                                       ],
+                        "execution_mode":  "skill_assigned",
+                        "write_scope":  "",
+                        "expected_outputs":  [
+
+                                             ],
+                        "verification":  [
+
+                                         ],
+                        "gap_reason":  null,
+                        "acceptance_criteria":  [
+                                                    {
+                                                        "criterion_id":  "roadmap-complete",
+                                                        "description":  "Enhancement roadmap contains prioritized, concrete technical recommendations for the project.",
+                                                        "verification_mode":  "automated"
+                                                    }
+                                                ]
+                    }
+                ],
+    "work_units":  [
+                       {
+                           "unit_id":  "codebase_inspection--code-reviewer--owner",
+                           "module_id":  "codebase_inspection",
+                           "skill_id":  "code-reviewer",
+                           "role":  "owner",
+                           "responsibility":  "Perform static analysis, flaw identification, and architecture review on the sel codebase.",
+                           "write_scope":  "module:codebase_inspection",
+                           "depends_on_unit_ids":  [
+
+                                                   ],
+                           "expected_outputs":  [
+                                                    "Perform static analysis, flaw identification, and architecture review on the sel codebase."
+                                                ],
+                           "verification":  [
+                                                "Verify the module acceptance criteria."
+                                            ],
+                           "stage_order":  1,
+                           "phase_id":  "module-stage-1"
+                       },
+                       {
+                           "unit_id":  "enhancement_roadmap--simplify-code--owner",
+                           "module_id":  "enhancement_roadmap",
+                           "skill_id":  "simplify-code",
+                           "role":  "owner",
+                           "responsibility":  "Review code patterns for simplification, maintainability, and clean technical roadmapping.",
+                           "write_scope":  "module:enhancement_roadmap",
+                           "depends_on_unit_ids":  [
+
+                                                   ],
+                           "expected_outputs":  [
+                                                    "Review code patterns for simplification, maintainability, and clean technical roadmapping."
+                                                ],
+                           "verification":  [
+                                                "Verify the module acceptance criteria."
+                                            ],
+                           "stage_order":  1,
+                           "phase_id":  "module-stage-1"
+                       }
+                   ]
+}

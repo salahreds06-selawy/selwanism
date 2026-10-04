@@ -1,0 +1,20 @@
+{
+    "lane":  "cognee",
+    "stage":  "skeleton_check",
+    "task":  "I wanna improve this project look inspect and learn what can i do",
+    "top_k":  3,
+    "max_chars_per_item":  220,
+    "keywords":  [
+                     "wanna",
+                     "improve",
+                     "this",
+                     "project",
+                     "look",
+                     "inspect",
+                     "and",
+                     "learn",
+                     "what",
+                     "can"
+                 ],
+    "project_key_source":  null
+}

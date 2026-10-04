@@ -1,0 +1,23 @@
+{
+    "stage":  "requirement_doc",
+    "run_id":  "20261004T154814Z-ccc3280b",
+    "governance_scope":  "root",
+    "mode":  "interactive_governed",
+    "requirement_doc_path":  "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\docs\\requirements\\2026-10-04-approve-all-of-them-and-add-some-ui-imporvements-proceed-level-l.md",
+    "child_requirement_handoff_path":  null,
+    "canonical_write_allowed":  true,
+    "inherited_requirement_doc_path":  null,
+    "runtime_input_packet_path":  "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T154814Z-ccc3280b\\runtime-input-packet.json",
+    "code_task_tdd_decision":  {
+                                   "mode":  "required",
+                                   "source":  "runtime_inference",
+                                   "reason":  "The task includes implementation or defect-correction intent that requires code-task TDD evidence.",
+                                   "exception":  null
+                               },
+    "memory_context_path":  "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T154814Z-ccc3280b\\memory-activation\\requirement-context-pack.json",
+    "memory_context_item_count":  2,
+    "memory_context_estimated_tokens":  22,
+    "memory_disclosure_level":  "decision_focused",
+    "memory_capsule_count":  1,
+    "generated_at":  "2026-10-04T15:48:46Z"
+}

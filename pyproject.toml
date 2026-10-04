@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "selwanism"
+version = "2.1.0"
+description = "Personal Pentesting CLI Assistant"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "Salah Eddin Essbihi" }
+]
+keywords = ["pentesting", "security", "cheatsheet", "cli", "red-team"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+    "Environment :: Console",
+    "Operating System :: OS Independent"
+]
+
+[project.optional-dependencies]
+clipboard = ["pyperclip"]
+
+[project.scripts]
+sel = "selwanism.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["selwanism*"]
+
+[tool.setuptools.package-data]
+selwanism = ["data/tools/*.json"]

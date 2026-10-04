@@ -1,0 +1,232 @@
+{
+    "schema_version":  "agent_execution_handoff_v1",
+    "source_run_id":  "20261004T153629Z-c51938ae",
+    "status":  "agent_action_required",
+    "control_owner":  "agent",
+    "workflow_level":  "L",
+    "module_execution_path":  "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\module-execution.json",
+    "result_contract":  {
+                            "schema_version":  "module_execution_v1",
+                            "source_run_id":  "20261004T153629Z-c51938ae",
+                            "module_work_plan_digest":  "799a2282239d498f16bf77ffe4718408b4ef58ad2f40145f66b62704b9e31e5c",
+                            "required_top_level_fields":  [
+                                                              "schema_version",
+                                                              "source_run_id",
+                                                              "module_work_plan_digest",
+                                                              "units",
+                                                              "modules"
+                                                          ],
+                            "terminal_states":  [
+                                                    "completed",
+                                                    "failed",
+                                                    "blocked"
+                                                ],
+                            "criterion_terminal_states":  [
+                                                              "passing",
+                                                              "failing",
+                                                              "blocked"
+                                                          ],
+                            "criterion_result_required_fields":  [
+                                                                     "criterion_id",
+                                                                     "state"
+                                                                 ],
+                            "units":  [
+                                          {
+                                              "unit_id":  "codebase_inspection--code-reviewer--owner",
+                                              "module_id":  "codebase_inspection",
+                                              "skill_id":  "code-reviewer",
+                                              "role":  "owner",
+                                              "required_result_fields":  [
+                                                                             "unit_id",
+                                                                             "module_id",
+                                                                             "skill_id",
+                                                                             "role",
+                                                                             "state",
+                                                                             "result_summary",
+                                                                             "evidence_paths",
+                                                                             "verification_results"
+                                                                         ]
+                                          },
+                                          {
+                                              "unit_id":  "enhancement_roadmap--simplify-code--owner",
+                                              "module_id":  "enhancement_roadmap",
+                                              "skill_id":  "simplify-code",
+                                              "role":  "owner",
+                                              "required_result_fields":  [
+                                                                             "unit_id",
+                                                                             "module_id",
+                                                                             "skill_id",
+                                                                             "role",
+                                                                             "state",
+                                                                             "result_summary",
+                                                                             "evidence_paths",
+                                                                             "verification_results"
+                                                                         ]
+                                          }
+                                      ],
+                            "modules":  [
+                                            {
+                                                "module_id":  "codebase_inspection",
+                                                "required":  true,
+                                                "execution_mode":  "skill_assigned",
+                                                "gap_reason":  null,
+                                                "acceptance_criteria":  [
+                                                                            {
+                                                                                "criterion_id":  "inspection-complete",
+                                                                                "description":  "Codebase inspection report details CLI argument defects, Windows clear screen issue, and tight coupling of cheatsheets.",
+                                                                                "verification_mode":  "automated"
+                                                                            }
+                                                                        ],
+                                                "required_result_fields":  [
+                                                                               "module_id",
+                                                                               "required",
+                                                                               "execution_mode",
+                                                                               "gap_reason",
+                                                                               "state",
+                                                                               "criterion_results"
+                                                                           ]
+                                            },
+                                            {
+                                                "module_id":  "enhancement_roadmap",
+                                                "required":  true,
+                                                "execution_mode":  "skill_assigned",
+                                                "gap_reason":  null,
+                                                "acceptance_criteria":  [
+                                                                            {
+                                                                                "criterion_id":  "roadmap-complete",
+                                                                                "description":  "Enhancement roadmap contains prioritized, concrete technical recommendations for the project.",
+                                                                                "verification_mode":  "automated"
+                                                                            }
+                                                                        ],
+                                                "required_result_fields":  [
+                                                                               "module_id",
+                                                                               "required",
+                                                                               "execution_mode",
+                                                                               "gap_reason",
+                                                                               "state",
+                                                                               "criterion_results"
+                                                                           ]
+                                            }
+                                        ],
+                            "submission_template":  {
+                                                        "schema_version":  "module_execution_v1",
+                                                        "source_run_id":  "20261004T153629Z-c51938ae",
+                                                        "module_work_plan_digest":  "799a2282239d498f16bf77ffe4718408b4ef58ad2f40145f66b62704b9e31e5c",
+                                                        "units":  [
+                                                                      {
+                                                                          "unit_id":  "codebase_inspection--code-reviewer--owner",
+                                                                          "module_id":  "codebase_inspection",
+                                                                          "skill_id":  "code-reviewer",
+                                                                          "role":  "owner",
+                                                                          "state":  null,
+                                                                          "result_summary":  "",
+                                                                          "evidence_paths":  [
+
+                                                                                             ],
+                                                                          "verification_results":  [
+
+                                                                                                   ]
+                                                                      },
+                                                                      {
+                                                                          "unit_id":  "enhancement_roadmap--simplify-code--owner",
+                                                                          "module_id":  "enhancement_roadmap",
+                                                                          "skill_id":  "simplify-code",
+                                                                          "role":  "owner",
+                                                                          "state":  null,
+                                                                          "result_summary":  "",
+                                                                          "evidence_paths":  [
+
+                                                                                             ],
+                                                                          "verification_results":  [
+
+                                                                                                   ]
+                                                                      }
+                                                                  ],
+                                                        "modules":  [
+                                                                        {
+                                                                            "module_id":  "codebase_inspection",
+                                                                            "required":  true,
+                                                                            "execution_mode":  "skill_assigned",
+                                                                            "gap_reason":  null,
+                                                                            "state":  null,
+                                                                            "criterion_results":  [
+                                                                                                      {
+                                                                                                          "criterion_id":  "inspection-complete",
+                                                                                                          "state":  null,
+                                                                                                          "details":  ""
+                                                                                                      }
+                                                                                                  ]
+                                                                        },
+                                                                        {
+                                                                            "module_id":  "enhancement_roadmap",
+                                                                            "required":  true,
+                                                                            "execution_mode":  "skill_assigned",
+                                                                            "gap_reason":  null,
+                                                                            "state":  null,
+                                                                            "criterion_results":  [
+                                                                                                      {
+                                                                                                          "criterion_id":  "roadmap-complete",
+                                                                                                          "state":  null,
+                                                                                                          "details":  ""
+                                                                                                      }
+                                                                                                  ]
+                                                                        }
+                                                                    ]
+                                                    }
+                        },
+    "return_command":  "py -3 -m vgo_cli.main canonical-entry --repo-root \"C:\\Users\\botay\\.gemini\\config\\skills\\vibe\" --workspace-root \"C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\" --artifact-root \"C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\" --prompt \"Continue after Agent module execution\" --continue-from-run-id \"20261004T153629Z-c51938ae\" --module-execution-json-file \"C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\module-execution.json\"",
+    "waves":  [
+                  {
+                      "wave_id":  "module-stage-1-codebase_inspection--code-reviewer--owner",
+                      "execution_mode":  "sequential",
+                      "unit_ids":  [
+                                       "codebase_inspection--code-reviewer--owner"
+                                   ]
+                  },
+                  {
+                      "wave_id":  "module-stage-1-enhancement_roadmap--simplify-code--owner",
+                      "execution_mode":  "sequential",
+                      "unit_ids":  [
+                                       "enhancement_roadmap--simplify-code--owner"
+                                   ]
+                  }
+              ],
+    "units":  [
+                  {
+                      "unit_id":  "codebase_inspection--code-reviewer--owner",
+                      "module_id":  "codebase_inspection",
+                      "skill_id":  "code-reviewer",
+                      "role":  "owner",
+                      "skill_entrypoint":  "C:\\Users\\botay\\.agents\\skills\\code-reviewer\\SKILL.md",
+                      "responsibility":  "Perform static analysis, flaw identification, and architecture review on the sel codebase.",
+                      "expected_outputs":  [
+                                               "Perform static analysis, flaw identification, and architecture review on the sel codebase."
+                                           ],
+                      "verification":  [
+                                           "Verify the module acceptance criteria."
+                                       ],
+                      "depends_on_unit_ids":  [
+
+                                              ],
+                      "write_scope":  "module:codebase_inspection"
+                  },
+                  {
+                      "unit_id":  "enhancement_roadmap--simplify-code--owner",
+                      "module_id":  "enhancement_roadmap",
+                      "skill_id":  "simplify-code",
+                      "role":  "owner",
+                      "skill_entrypoint":  "C:\\Users\\botay\\.agents\\skills\\simplify-code\\SKILL.md",
+                      "responsibility":  "Review code patterns for simplification, maintainability, and clean technical roadmapping.",
+                      "expected_outputs":  [
+                                               "Review code patterns for simplification, maintainability, and clean technical roadmapping."
+                                           ],
+                      "verification":  [
+                                           "Verify the module acceptance criteria."
+                                       ],
+                      "depends_on_unit_ids":  [
+
+                                              ],
+                      "write_scope":  "module:enhancement_roadmap"
+                  }
+              ]
+}

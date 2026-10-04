@@ -1,0 +1,38 @@
+{
+    "run_id":  "20261004T154814Z-ccc3280b",
+    "root_run_id":  "20261004T154814Z-ccc3280b",
+    "stages":  [
+                   {
+                       "stage_name":  "skeleton_check",
+                       "run_id":  "20261004T154814Z-ccc3280b",
+                       "root_run_id":  "20261004T154814Z-ccc3280b",
+                       "previous_stage_name":  null,
+                       "previous_stage_receipt_path":  null,
+                       "current_receipt_path":  "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T154814Z-ccc3280b\\skeleton-receipt.json",
+                       "transition_validated":  true,
+                       "validated_at":  "2026-10-04T15:48:16Z"
+                   },
+                   {
+                       "stage_name":  "deep_interview",
+                       "run_id":  "20261004T154814Z-ccc3280b",
+                       "root_run_id":  "20261004T154814Z-ccc3280b",
+                       "previous_stage_name":  "skeleton_check",
+                       "previous_stage_receipt_path":  "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T154814Z-ccc3280b\\skeleton-receipt.json",
+                       "current_receipt_path":  "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T154814Z-ccc3280b\\intent-contract.json",
+                       "transition_validated":  true,
+                       "validated_at":  "2026-10-04T15:48:46Z"
+                   },
+                   {
+                       "stage_name":  "requirement_doc",
+                       "run_id":  "20261004T154814Z-ccc3280b",
+                       "root_run_id":  "20261004T154814Z-ccc3280b",
+                       "previous_stage_name":  "deep_interview",
+                       "previous_stage_receipt_path":  "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T154814Z-ccc3280b\\intent-contract.json",
+                       "current_receipt_path":  "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T154814Z-ccc3280b\\requirement-doc-receipt.json",
+                       "transition_validated":  true,
+                       "validated_at":  "2026-10-04T15:48:46Z"
+                   }
+               ],
+    "last_stage_name":  "requirement_doc",
+    "updated_at":  "2026-10-04T15:48:46Z"
+}

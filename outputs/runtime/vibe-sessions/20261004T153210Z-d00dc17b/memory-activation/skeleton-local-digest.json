@@ -1,0 +1,17 @@
+{
+    "stage":  "skeleton_check",
+    "owner":  "state_store",
+    "status":  "fallback_local_digest",
+    "generated_at":  "2026-10-04T15:32:12Z",
+    "source_receipt_path":  "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153210Z-d00dc17b\\skeleton-receipt.json",
+    "items":  [
+                  "Task focus: I wanna improve this project look inspect and learn what can i do Update: I wanna improve this project look inspect and learn what can i do",
+                  "Git branch: ",
+                  "All required governed runtime prerequisite paths are present."
+              ],
+    "budget":  {
+                   "top_k":  3,
+                   "max_tokens":  96,
+                   "max_chars_per_item":  220
+               }
+}

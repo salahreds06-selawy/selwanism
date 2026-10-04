@@ -1,0 +1,35 @@
+{
+    "stage":  "requirement_doc",
+    "source_stage":  "bounded_memory_recall",
+    "owner":  "state_store",
+    "disclosure_level":  "decision_focused",
+    "generated_at":  "2026-10-04T15:09:58Z",
+    "capsule_count":  1,
+    "selected_capsules":  [
+                              {
+                                  "capsule_id":  "bc094bb83c609174",
+                                  "owner":  "state_store",
+                                  "lane":  null,
+                                  "kind":  "fallback_digest",
+                                  "updated_at":  null,
+                                  "title":  "Task focus: I wanna improve this project look inspect and learn what can i do",
+                                  "why_now":  "Matched state_store memory for requirement_doc.",
+                                  "expansion_ref":  "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T150911Z-805cf5cf\\memory-activation\\skeleton-local-digest.json#bc094bb83c609174",
+                                  "summary_lines":  [
+                                                        "Task focus: I wanna improve this project look inspect and learn what can i do",
+                                                        "Git branch: ",
+                                                        "All required governed runtime prerequisite paths are present."
+                                                    ]
+                              }
+                          ],
+    "items":  [
+                  "Task focus: I wanna improve this project look inspect and learn what can i do",
+                  "Git branch: "
+              ],
+    "estimated_tokens":  23,
+    "budget":  {
+                   "top_k":  2,
+                   "max_tokens":  120,
+                   "max_chars_per_item":  260
+               }
+}

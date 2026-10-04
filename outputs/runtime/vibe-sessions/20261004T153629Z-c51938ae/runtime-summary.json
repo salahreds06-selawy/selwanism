@@ -1,0 +1,159 @@
+{
+  "governance_scope": "root",
+  "mode": "interactive_governed",
+  "generated_at": "2026-10-04T15:39:23Z",
+  "artifact_root": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main",
+  "session_root": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae",
+  "session_root_relative": "outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae",
+  "hierarchy": {
+    "root_run_id": "20261004T153629Z-c51938ae",
+    "parent_run_id": null,
+    "parent_unit_id": null,
+    "inherited_requirement_doc_path": null,
+    "inherited_execution_plan_path": null,
+    "delegation_envelope_path": null
+  },
+  "stage_order": [
+    "skeleton_check",
+    "deep_interview",
+    "requirement_doc",
+    "xl_plan",
+    "plan_execute",
+    "phase_cleanup"
+  ],
+  "executed_stage_order": [
+    "skeleton_check",
+    "deep_interview",
+    "requirement_doc",
+    "xl_plan",
+    "plan_execute",
+    "phase_cleanup"
+  ],
+  "terminal_stage": "phase_cleanup",
+  "storage": {
+    "workspace_root": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main",
+    "workspace_sidecar_root": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\.vibeskills",
+    "project_descriptor_path": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\.vibeskills\\project.json",
+    "artifact_root": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main",
+    "artifact_root_source": "explicit_override",
+    "default_workspace_sidecar_artifact_root": false,
+    "host_sidecar_root": "C:\\Users\\botay\\.agents\\.vibeskills",
+    "workspace_memory_identity_root": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\.vibeskills\\project.json",
+    "workspace_memory_identity_scope": "workspace",
+    "workspace_memory_driver_contract": "workspace_shared_memory_v1",
+    "workspace_memory_logical_owners": [
+      "state_store",
+      "serena",
+      "ruflo",
+      "cognee"
+    ]
+  },
+  "memory_activation": {
+    "policy_mode": "shadow",
+    "routing_contract": "advisory_first_post_route_only",
+    "fallback_event_count": 4,
+    "artifact_count": 7,
+    "budget_guard_respected": true
+  },
+  "delivery_acceptance": {
+    "gate_result": "PASS",
+    "completion_language_allowed": true,
+    "readiness_state": "fully_ready",
+    "manual_review_layer_count": 0,
+    "failing_layer_count": 0,
+    "runtime_status": "completed"
+  },
+  "host_stage_disclosure": null,
+  "host_user_briefing": {
+    "enabled": true,
+    "mode": "host_user_briefing",
+    "freeze_gate_passed": true,
+    "segment_count": 1,
+    "segments": [
+      {
+        "segment_id": "task_module_status",
+        "stage": "phase_cleanup",
+        "category": "completion",
+        "truth_layer": "module_acceptance_truth",
+        "status": "passing",
+        "gate_status": "PASS",
+        "rendered_text": "Task is complete.\n- Module acceptance: `passing`\n- Delivery gate: `PASS`\n- All required modules are complete and accepted by their criteria."
+      }
+    ],
+    "rendered_text": "Task is complete.\n- Module acceptance: `passing`\n- Delivery gate: `PASS`\n- All required modules are complete and accepted by their criteria."
+  },
+  "bounded_return_control": null,
+  "agent_execution_handoff": null,
+  "artifacts_relative": {
+    "skeleton_receipt": "outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\skeleton-receipt.json",
+    "runtime_input_packet": "outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\runtime-input-packet.json",
+    "governance_capsule": "outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\governance-capsule.json",
+    "stage_lineage": "outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\stage-lineage.json",
+    "intent_contract": "outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\intent-contract.json",
+    "requirement_doc": "docs\\requirements\\2026-10-04-i-wanna-improve-this-project-look-inspect-and-learn-what-can-i-d.md",
+    "requirement_receipt": "outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\requirement-doc-receipt.json",
+    "execution_plan": "docs\\plans\\2026-10-04-i-wanna-improve-this-project-look-inspect-and-learn-what-can-i-d-execution-plan.md",
+    "execution_plan_receipt": "outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\execution-plan-receipt.json",
+    "module_work_plan": "outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\module-work-plan.json",
+    "module_execution": "outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\module-execution.json",
+    "agent_execution_handoff": "outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\agent-execution-handoff.json",
+    "execute_receipt": "outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\phase-execute.json",
+    "execution_manifest": "outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\execution-manifest.json",
+    "host_stage_disclosure": null,
+    "host_user_briefing": "outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\host-user-briefing.md",
+    "cleanup_receipt": "outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\cleanup-receipt.json",
+    "delivery_acceptance_report": "outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\delivery-acceptance-report.json",
+    "delivery_acceptance_markdown": "outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\delivery-acceptance-report.md",
+    "memory_activation_report": "outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\memory-activation\\memory-activation-report.json",
+    "memory_activation_markdown": "outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\memory-activation\\memory-activation-report.md",
+    "delegation_envelope": null,
+    "delegation_validation_receipt": null
+  },
+  "run_id": "20261004T153629Z-c51938ae",
+  "task": "I wanna improve this project look inspect and learn what can i do Update: I wanna improve this project look inspect and learn what can i do Update: I wanna improve this project look inspect and learn what can i do",
+  "truth_owner": "python",
+  "artifacts": {
+    "skeleton_receipt": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\skeleton-receipt.json",
+    "runtime_input_packet": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\runtime-input-packet.json",
+    "governance_capsule": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\governance-capsule.json",
+    "stage_lineage": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\stage-lineage.json",
+    "intent_contract": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\intent-contract.json",
+    "requirement_doc": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\docs\\requirements\\2026-10-04-i-wanna-improve-this-project-look-inspect-and-learn-what-can-i-d.md",
+    "requirement_receipt": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\requirement-doc-receipt.json",
+    "execution_plan": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\docs\\plans\\2026-10-04-i-wanna-improve-this-project-look-inspect-and-learn-what-can-i-d-execution-plan.md",
+    "execution_plan_receipt": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\execution-plan-receipt.json",
+    "module_work_plan": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\module-work-plan.json",
+    "module_execution": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\module-execution.json",
+    "agent_execution_handoff": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\agent-execution-handoff.json",
+    "execute_receipt": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\phase-execute.json",
+    "execution_manifest": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\execution-manifest.json",
+    "host_stage_disclosure": null,
+    "host_user_briefing": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\host-user-briefing.md",
+    "cleanup_receipt": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\cleanup-receipt.json",
+    "delivery_acceptance_report": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\delivery-acceptance-report.json",
+    "delivery_acceptance_markdown": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\delivery-acceptance-report.md",
+    "memory_activation_report": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\memory-activation\\memory-activation-report.json",
+    "memory_activation_markdown": "C:\\Users\\botay\\OneDrive\\Desktop\\Projeler\\selwanism-main\\outputs\\runtime\\vibe-sessions\\20261004T153629Z-c51938ae\\memory-activation\\memory-activation-report.md",
+    "delegation_envelope": null,
+    "delegation_validation_receipt": null
+  },
+  "bound_skill_ids": [
+    "code-reviewer",
+    "simplify-code"
+  ],
+  "completed_module_work": [
+    {
+      "skill_id": "code-reviewer",
+      "unit_id": "codebase_inspection--code-reviewer--owner",
+      "module_id": "codebase_inspection"
+    },
+    {
+      "skill_id": "simplify-code",
+      "unit_id": "enhancement_roadmap--simplify-code--owner",
+      "module_id": "enhancement_roadmap"
+    }
+  ],
+  "requested_stage_stop": null,
+  "effective_requested_stage_stop": "phase_cleanup",
+  "stage_stop_source": "progressive_default"
+}

