@@ -1,4 +1,4 @@
-cat > ~/tools/README.md << 'EOF'
+
 # Selwanism
 
 **Personal Pentesting Assistant — A fast, zero-dependency CLI tool for penetration testers.**
