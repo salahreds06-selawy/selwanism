@@ -11,11 +11,6 @@ Selwanism is a lightweight command-line reference that gives you ready-to-use co
 
 ---
 
-## 📸 Screenshot
-
-![Selwanism CLI](images/screenshot.png)
-
----
 
 ## ✨ Features
 
